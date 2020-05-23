@@ -9,6 +9,7 @@
 .comment-form  {
   margin: 10px 0;
   width: 100%;
+  text-align: initial;
 }
 .comment-form input {
   width: 90%;
