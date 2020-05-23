@@ -2,7 +2,7 @@
   border-bottom: 1px solid #3333;
   height: 60px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background: #ffffff;
 }
@@ -24,5 +24,17 @@
 }
 
 .social {
-  width: 50px;
+  width: 50px
 }
+
+.logo svg {
+  font-size: 2rem;
+  align-self: center;
+  padding-right: 5px;
+}
+
+.logo {
+  display: flex;
+  width: auto;
+}
+
