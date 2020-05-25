@@ -9,14 +9,10 @@ const CommentSection = props => {
   const [newComment, setNewComment] = useState('');
   const [comments, setComments] = useState(props.comments);
 
-  const addComment = text => {
-    const newComment = [...comments, text];
-    setComments(newComment);
-  };
 
   const submitComment = e => {
     e.preventDefault();
-    addComment({username: 'Ryan', text: `${newComment}`})
+    setComments([...comments, {username: 'Ryan', text: `${newComment}`}])
     setNewComment('');
   };
   
