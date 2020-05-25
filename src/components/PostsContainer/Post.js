@@ -11,8 +11,6 @@ const Post = props => {
   // set up state for the likes
   const [likes, useLikes] = useState(props.post.likes);
   
-  console.log(props);
-
   return (
     <div className="post-border">
       <PostHeader

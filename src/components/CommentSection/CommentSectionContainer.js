@@ -6,13 +6,29 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
-  const [comments, useComment] = useState(props.comments)
+  const [newComment, setNewComment] = useState('');
+  const [comments, setComments] = useState(props.comments);
+
+  const addComment = text => {
+    const newComment = [...comments, text];
+    setComments(newComment);
+  };
+
+  const submitComment = e => {
+    e.preventDefault();
+    addComment({username: 'Ryan', text: `${newComment}`})
+    setNewComment('');
+  };
+  
+  const changeComment = e => {
+    setNewComment(e.target.value);
+  }
 
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
       {comments.map(comment => <Comment comment={comment} />)}
-      <CommentInput />
+      <CommentInput submitComment={submitComment} changeComment={changeComment} comment={newComment} />
     </div>
   );
 };
