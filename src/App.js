@@ -24,7 +24,7 @@ const App = () => {
   }
 
   const handleRes = () => {
-    result === '' ? setPosts(dummyData) : setPosts(posts.filter(post => post.username.includes(result))) 
+    result === '' ? setPosts(dummyData) : setPosts(posts.filter(post => post.username.toLowerCase().includes(result.toLowerCase()))) 
   }
 
   return (
